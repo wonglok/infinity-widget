@@ -8,44 +8,51 @@ module.exports = {
   entry: {
     widget: path.resolve(__dirname, "./src/widget/main.tsx"),
   },
-  resolve: {
-    alias: {
-      ["@"]: path.resolve(__dirname, "./src/widget"),
-    },
-    extensions: [".js", ".mjs", ".jsx", ".ts", ".tsx"],
-  },
-  experiments: {
-    outputModule: true,
-  },
   output: {
     crossOriginLoading: "use-credentials",
     clean: true,
     library: {
       type: "module",
     },
-    path: path.resolve(__dirname, `./public/generated/${mode}/widget/`),
+    path: path.resolve(__dirname, `./public/generated/widget`),
     filename: "./[name].[fullhash].js",
   },
-  devServer: {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers":
-        "X-Requested-With, content-type, Authorization",
+  resolve: {
+    alias: {
+      ["@"]: path.resolve(__dirname, "./src"),
     },
-    client: {
-      overlay: false,
-    },
-    allowedHosts: "all",
-    static: {
-      directory: path.join(__dirname, "./dist"),
-    },
-    compress: true,
-    port: 3002,
+    extensions: [".js", ".mjs", ".jsx", ".ts", ".tsx"],
   },
+  experiments: {
+    outputModule: true,
+  },
+  watchOptions: {
+    stdin: true,
+    ignored: /public/,
+  },
+
+
+  // devServer: {
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+  //     "Access-Control-Allow-Headers":
+  //       "X-Requested-With, content-type, Authorization",
+  //   },
+  //   client: {
+  //     overlay: false,
+  //   },
+  //   allowedHosts: "all",
+  //   static: {
+  //     directory: path.join(__dirname, "./dist"),
+  //   },
+  //   compress: true,
+  //   port: 3002,
+  // },
   module: {
     rules: [
       {
+        exclude: /node_modules/,
         test: /\.([cm]?ts|tsx)$/,
         loader: "ts-loader",
         options: {
@@ -114,7 +121,7 @@ module.exports = {
     // }),
 
     new WebpackManifestPlugin({
-      basePath: "./",
+      basePath: "",
     }),
 
     //

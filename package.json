@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -n webpack,serve \"npm run dev:webpack\" \"npm run dev:next\" ",
-    "dev:next": "next dev --webpack",
-    "dev:webpack": "webpack --config webpack.config.cjs --mode development;",
+    "dev:next": "next dev --webpack --port 3002",
+    "dev:webpack": "webpack -w --config webpack.config.cjs --mode development;",
     "build:next": "next build --webpack",
     "build:webpack": "webpack --config ./webpack.config.cjs --mode production;",
     "build": "npm run build:next; npm run build:webpack",
