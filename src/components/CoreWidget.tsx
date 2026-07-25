@@ -10,7 +10,7 @@ export function CoreWidget({}) {
 
   return (
     <>
-      <div className="p-3 bg-gray-200">CoreWidget</div>
+      <div className="p-3 bg-gray-200 h-full">CoreWidget</div>
     </>
   );
 }
