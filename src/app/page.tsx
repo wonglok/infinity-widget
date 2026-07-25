@@ -12,6 +12,7 @@ export default function Home() {
           email: "lok@lok.com",
         }}
         app={{
+          id: "ppap-app-id",
           name: "loklok cool widget",
           origin: `https://infinity-widget.vercel.app`,
         }}
