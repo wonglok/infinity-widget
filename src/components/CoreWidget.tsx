@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 export function CoreWidget({ user, app }: { user: any; app: any }) {
   //
-
   useEffect(() => {
     //
   }, []);
