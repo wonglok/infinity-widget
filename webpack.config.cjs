@@ -28,7 +28,7 @@ module.exports = {
   },
   watchOptions: {
     stdin: true,
-    ignored: /public/,
+    ignored: /(public|.next)/,
   },
 
 
