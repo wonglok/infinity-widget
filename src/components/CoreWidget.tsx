@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { TikTakToe } from "./TikTakToe";
 
 export function CoreWidget({ user, app }: { user: any; app: any }) {
