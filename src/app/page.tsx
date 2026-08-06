@@ -4,13 +4,13 @@ export default function Home() {
   //
 
   let mockUser = {
-    id: "userID_u123456",
-    username: "wonglok831",
-    email: "lok@lok.com",
+    id: "mock_userID_u123456",
+    username: "mock_wonglok831",
+    email: "mock_lok@lok.com",
   };
   let mockApp = {
-    id: "ppap-app-id",
-    name: "loklok cool widget",
+    id: "mock_ppap-app-id",
+    name: "mock_loklok cool widget",
     origin: `https://infinity-widget.vercel.app`,
   };
 
