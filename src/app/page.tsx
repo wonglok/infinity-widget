@@ -19,6 +19,8 @@ export default function Home() {
 
   return (
     <div className="w-full h-full">
+      Welcome to Tik tak toe widget.
+      <br/>
       Please visit the <a href={"https://desktop.inter-site.com"}>https://desktop.inter-site.com</a>
       {/*  */}
       {/* <CoreWidget user={mockUser} app={mockApp}></CoreWidget> */}
