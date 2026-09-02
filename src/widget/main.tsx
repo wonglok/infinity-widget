@@ -16,11 +16,3 @@ export async function install({ domElement = null, user = null, app = null }) {
     root.unmount();
   };
 }
-
-//
-//
-//
-//
-
-//
-//

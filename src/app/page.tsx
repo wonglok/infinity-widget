@@ -21,7 +21,9 @@ export default function Home() {
 
   return (
     <div className="w-full h-full">
-      <CoreWidget user={mockUser} app={mockApp}></CoreWidget>
+      Please visit the <a href={"https://desktop.inter-site.com"}>https://desktop.inter-site.com</a>
+      {/*  */}
+      {/* <CoreWidget user={mockUser} app={mockApp}></CoreWidget> */}
     </div>
   );
 }
